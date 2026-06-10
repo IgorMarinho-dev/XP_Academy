@@ -14,7 +14,17 @@ public class Main {
         igor.listarMissoes();
         System.out.println("\nConcluindo missão...\n");
 
-        estudarJava.concluirMissao();
+        igor.concluirMissao(programarProjeto);
         igor.listarMissoes();
+
+        System.out.println("XP: " + igor.getXp());
+        System.out.println("Nível: " + igor.getNivel());
+
+        igor.ganharXp(150);
+
+        System.out.println("XP: " + igor.getXp());
+        System.out.println("Nível: " + igor.getNivel());
+
+        igor.mostrarEstatisticas();
     }
 }

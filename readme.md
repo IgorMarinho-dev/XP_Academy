@@ -2,7 +2,7 @@
 
 XP Academy é um projeto pessoal desenvolvido em Java com o objetivo de transformar metas e tarefas do dia a dia em um sistema inspirado em RPGs.
 
-A proposta é permitir que usuários criem missões personalizadas, organizem seus objetivos e acompanhem seu progresso através de mecânicas de evolução que serão implementadas ao longo do desenvolvimento.
+A proposta é permitir que usuários criem missões personalizadas, organizem seus objetivos e acompanhem seu progresso através de mecânicas de evolução e progressão.
 
 ## Objetivo do Projeto
 
@@ -26,12 +26,15 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * CSS
 * JavaScript
 
-## Funcionalidades da Versão 0.1
+## Funcionalidades da Versão 0.2
 
 ### Usuários
 
 * Criação de usuários
 * Armazenamento de informações básicas
+* Sistema de XP
+* Sistema de níveis
+* Exibição de estatísticas do usuário
 
 ### Missões
 
@@ -45,42 +48,59 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Associação de missões a usuários
 * Listagem de missões
 * Conclusão de missões
+* Contagem de missões concluídas
+* Contagem de missões pendentes
+
+### Progressão
+
+* Ganho de XP ao concluir missões
+* Recompensa baseada na dificuldade da missão
+* Sistema automático de subida de nível
+* Mensagem de evolução ao subir de nível
 
 ## Estrutura Atual
 
 * `Usuario.java`
 
-    * Responsável por armazenar informações do usuário e suas missões.
+  * Responsável por armazenar informações do usuário, missões, XP e nível.
 
 * `Missao.java`
 
-    * Representa uma missão criada pelo usuário.
+  * Representa uma missão criada pelo usuário.
 
 * `Main.java`
 
-    * Utilizado para testes e execução das funcionalidades atuais.
+  * Utilizado para testes e execução das funcionalidades atuais.
 
 ## Roadmap
-
-### Versão 0.2
-
-* Sistema de XP
-* Níveis de usuário
-* Recompensas por dificuldade
 
 ### Versão 0.3
 
 * Sistema de conquistas
-* Estatísticas de progresso
 * Histórico de missões
+* Estatísticas avançadas
+* Categorias de missões
+
+### Versão 0.4
+
+* Salvamento de progresso em arquivo
+* Persistência de dados entre execuções
+* Carregamento automático do perfil do usuário
+
+### Versão 0.5
+
+* Integração com banco de dados MySQL
+* Camada de serviços e repositórios
+* Estrutura preparada para aplicação web
 
 ### Versão 1.0
 
-* Integração com banco de dados MySQL
 * Interface web
 * Sistema de autenticação
-* Persistência de dados
+* Persistência completa de dados
+* Dashboard do usuário
+* Sistema completo de progressão
 
 ## Autor
 
-Desenvolvido por Igor Marinho como projeto de aprendizado e portfólio.
+Desenvolvido por Igor Marinho como projeto de aprendizado, prática de programação orientada a objetos e construção de portfólio.
