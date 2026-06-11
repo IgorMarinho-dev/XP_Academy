@@ -26,7 +26,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * CSS
 * JavaScript
 
-## Funcionalidades da Versão 0.2
+## Funcionalidades da Versão 0.3
 
 ### Usuários
 
@@ -58,28 +58,58 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Sistema automático de subida de nível
 * Mensagem de evolução ao subir de nível
 
+### Conquistas
+
+* Sistema de conquistas desbloqueáveis
+* Verificação automática de conquistas
+* Conquista "Primeira Missão"
+* Conquista "Veterano"
+* Desbloqueio único por conquista
+* Associação de conquistas ao usuário
+
 ## Estrutura Atual
 
 * `Usuario.java`
 
-  * Responsável por armazenar informações do usuário, missões, XP e nível.
+  * Responsável por armazenar informações do usuário, missões, XP, nível e conquistas.
 
 * `Missao.java`
 
   * Representa uma missão criada pelo usuário.
 
+* `Conquista.java`
+
+  * Representa uma conquista desbloqueável pelo usuário.
+
 * `Main.java`
 
   * Utilizado para testes e execução das funcionalidades atuais.
 
+## Histórico de Versões
+
+### v0.1
+
+* Sistema básico de usuários
+* Sistema de missões
+* Associação de missões ao usuário
+
+### v0.2
+
+* Sistema de XP
+* Sistema de níveis
+* Recompensas por dificuldade
+* Estatísticas do usuário
+
+### v0.3 (Em desenvolvimento)
+
+* ✔ Sistema de conquistas
+* ✔ Primeira Missão
+* ✔ Veterano
+* ⬜ Histórico de missões
+* ⬜ Estatísticas avançadas
+* ⬜ Categorias de missões
+
 ## Roadmap
-
-### Versão 0.3
-
-* Sistema de conquistas
-* Histórico de missões
-* Estatísticas avançadas
-* Categorias de missões
 
 ### Versão 0.4
 

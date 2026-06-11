@@ -1,3 +1,5 @@
+import model.Conquista;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -26,5 +28,21 @@ public class Main {
         System.out.println("Nível: " + igor.getNivel());
 
         igor.mostrarEstatisticas();
+
+        Conquista primeiraMissao = new Conquista(
+                "Primeira Missão",
+                "Conclua sua primeira missão."
+        );
+
+        System.out.println(primeiraMissao.isDesbloqueada());
+
+        primeiraMissao.desbloquear();
+
+        System.out.println(primeiraMissao.isDesbloqueada());
+
+        Conquista conquista =
+                igor.buscarConquista("Primeira Missão");
+
+        System.out.println(conquista.getNome());
     }
 }

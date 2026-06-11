@@ -1,3 +1,5 @@
+import model.Conquista;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -7,6 +9,7 @@ public class Usuario {
     private String email;
     private String senha;
     private List<Missao> missoes;
+    private List<Conquista> conquistas;
     private int xp;
     private int nivel;
 
@@ -15,6 +18,21 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
         this.missoes = new ArrayList<>();
+        this.conquistas = new ArrayList<>();
+
+        this.conquistas.add(
+                new Conquista(
+                        "Primeira Missão",
+                        "Conclua sua primeira missão."
+                )
+        );
+
+        this.conquistas.add(
+                new Conquista(
+                        "Veterano",
+                        "Conclua 5 missões."
+                )
+        );
 
         this.xp = 0;
         this.nivel = 1;
@@ -69,6 +87,60 @@ public class Usuario {
         }
     }
 
+    public void adicionarConquista(Conquista conquista) {
+        this.conquistas.add(conquista);
+    }
+
+    public List<Conquista> getConquistas() {
+        return this.conquistas;
+    }
+
+    public Conquista buscarConquista(String nome) {
+
+        for (Conquista conquista : this.conquistas) {
+
+            if (conquista.getNome().equals(nome)) {
+                return conquista;
+            }
+
+        }
+
+        return null;
+    }
+
+    private void verificarConquistas() {
+
+        Conquista primeiraMissao =
+                buscarConquista("Primeira Missão");
+
+        if (primeiraMissao != null &&
+                !primeiraMissao.isDesbloqueada() &&
+                getQuantidadeMissoesConcluidas() >= 1) {
+
+            primeiraMissao.desbloquear();
+
+            System.out.println(
+                    "\nConquista desbloqueada: "
+                            + primeiraMissao.getNome()
+            );
+        }
+
+        Conquista veterano =
+                buscarConquista("Veterano");
+
+        if (veterano != null &&
+                !veterano.isDesbloqueada() &&
+                getQuantidadeMissoesConcluidas() >= 5) {
+
+            veterano.desbloquear();
+
+            System.out.println(
+                    "\nConquista desbloqueada: "
+                            + veterano.getNome()
+            );
+        }
+    }
+
     public void ganharXp(int quantidade) {
         int nivelAnterior = this.nivel;
 
@@ -115,6 +187,8 @@ public class Usuario {
             int xpRecebido = calcularXp(missao);
 
             ganharXp(xpRecebido);
+
+            verificarConquistas();
 
             System.out.println("Missão Concluída!");
             System.out.println("Xp recebido: " + xpRecebido);
