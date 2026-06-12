@@ -48,6 +48,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 
 * Associação de missões a usuários
 * Listagem de missões
+* Histórico de missões concluídas
 * Conclusão de missões
 * Contagem de missões concluídas
 * Contagem de missões pendentes
@@ -72,7 +73,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 
 * `Usuario.java`
 
-  * Responsável por armazenar informações do usuário, missões, XP, nível e conquistas.
+  * Responsável por armazenar informações do usuário, missões, histórico de missões, XP, nível e conquistas.
 
 * `Missao.java`
 
@@ -107,7 +108,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * ✔ Primeira Missão
 * ✔ Veterano
 * ✔ Categorias de missões
-* ⬜ Histórico de missões
+* ✔ Histórico de missões
 * ⬜ Estatísticas avançadas
 
 ## Roadmap

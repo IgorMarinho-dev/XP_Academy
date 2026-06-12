@@ -44,5 +44,7 @@ public class Main {
                 igor.buscarConquista("Primeira Missão");
 
         System.out.println(conquista.getNome());
+
+        igor.listarHistoricoMissoes();
     }
 }

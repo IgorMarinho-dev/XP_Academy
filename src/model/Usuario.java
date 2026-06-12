@@ -9,6 +9,7 @@ public class Usuario {
     private String email;
     private String senha;
     private List<Missao> missoes;
+    private List<Missao> historicoMissoes;
     private List<Conquista> conquistas;
     private int xp;
     private int nivel;
@@ -18,6 +19,7 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
         this.missoes = new ArrayList<>();
+        this.historicoMissoes = new ArrayList<>();
         this.conquistas = new ArrayList<>();
 
         this.conquistas.add(
@@ -84,6 +86,32 @@ public class Usuario {
             System.out.println("Categoria: " + missao.getCategoria());
             System.out.println("Dificuldade: " + missao.getDificuldade());
             System.out.println("Concluída: " + missao.isConcluida());
+            System.out.println("---------------------");
+        }
+    }
+
+    public List<Missao> getHistoricoMissoes() {
+        return historicoMissoes;
+    }
+
+    public void listarHistoricoMissoes() {
+
+        System.out.println("\n=== HISTÓRICO ===");
+
+        for (Missao missao : this.historicoMissoes) {
+
+            System.out.println(
+                    "Título: " + missao.getTitulo()
+            );
+
+            System.out.println(
+                    "Categoria: " + missao.getCategoria()
+            );
+
+            System.out.println(
+                    "Dificuldade: " + missao.getDificuldade()
+            );
+
             System.out.println("---------------------");
         }
     }
@@ -184,6 +212,8 @@ public class Usuario {
         if (!missao.isConcluida()) {
 
             missao.concluirMissao();
+
+            this.historicoMissoes.add(missao);
 
             int xpRecebido = calcularXp(missao);
 
