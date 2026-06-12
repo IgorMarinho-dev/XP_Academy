@@ -41,6 +41,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Criação de missões
 * Definição de dificuldade (0 a 5)
 * Descrição personalizada
+* Categoria personalizada
 * Status de conclusão
 
 ### Gerenciamento
@@ -75,7 +76,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 
 * `Missao.java`
 
-  * Representa uma missão criada pelo usuário.
+  * Representa uma missão criada pelo usuário, incluindo título, descrição, dificuldade, categoria e status de conclusão.
 
 * `Conquista.java`
 
@@ -105,9 +106,9 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * ✔ Sistema de conquistas
 * ✔ Primeira Missão
 * ✔ Veterano
+* ✔ Categorias de missões
 * ⬜ Histórico de missões
 * ⬜ Estatísticas avançadas
-* ⬜ Categorias de missões
 
 ## Roadmap
 

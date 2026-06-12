@@ -81,6 +81,7 @@ public class Usuario {
     public void listarMissoes() {
         for (Missao missao : this.missoes) {
             System.out.println("Título: " + missao.getTitulo());
+            System.out.println("Categoria: " + missao.getCategoria());
             System.out.println("Dificuldade: " + missao.getDificuldade());
             System.out.println("Concluída: " + missao.isConcluida());
             System.out.println("---------------------");

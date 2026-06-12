@@ -3,11 +3,13 @@ public class Missao {
     private String titulo;
     private int dificuldade;
     private String descricao;
+    private String categoria;
     private boolean concluida;
 
-    public Missao(String titulo, int dificuldade, String descricao) {
+    public Missao(String titulo, int dificuldade, String descricao, String categoria) {
         this.titulo = titulo;
         this.descricao = descricao;
+        this.categoria = categoria;
         this.concluida = false;
 
         setDificuldade(dificuldade);
@@ -41,6 +43,14 @@ public class Missao {
 
     public String getDescricao() {
         return this.descricao;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return this.categoria;
     }
 
     public boolean isConcluida() {
