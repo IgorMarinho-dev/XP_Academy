@@ -46,5 +46,9 @@ public class Main {
         System.out.println(conquista.getNome());
 
         igor.listarHistoricoMissoes();
+
+        System.out.println(
+                igor.getQuantidadeConquistasDesbloqueadas()
+        );
     }
 }

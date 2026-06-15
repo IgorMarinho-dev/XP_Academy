@@ -116,6 +116,21 @@ public class Usuario {
         }
     }
 
+    public int getQuantidadeMissoesCriadas() {
+        return this.missoes.size();
+    }
+
+    public double getTaxaConclusao() {
+
+        if (getQuantidadeMissoesCriadas() == 0) {
+            return 0;
+        }
+
+        return (double) getQuantidadeMissoesConcluidas()
+                / getQuantidadeMissoesCriadas()
+                * 100;
+    }
+
     public void adicionarConquista(Conquista conquista) {
         this.conquistas.add(conquista);
     }
@@ -168,6 +183,21 @@ public class Usuario {
                             + veterano.getNome()
             );
         }
+    }
+
+    public int getQuantidadeConquistasDesbloqueadas() {
+
+        int contador = 0;
+
+        for (Conquista conquista : this.conquistas) {
+
+            if (conquista.isDesbloqueada()) {
+                contador++;
+            }
+
+        }
+
+        return contador;
     }
 
     public void ganharXp(int quantidade) {
@@ -258,11 +288,32 @@ public class Usuario {
         System.out.println("XP: " + this.xp);
         System.out.println("Nível: " + this.nivel);
 
-        System.out.println("Missões concluídas: "
-                + getQuantidadeMissoesConcluidas());
+        System.out.println(
+                "Missões criadas: "
+                        + getQuantidadeMissoesCriadas()
+        );
 
-        System.out.println("Missões pendentes: "
-                + getQuantidadeMissoesPendentes());
+        System.out.println(
+                "Missões concluídas: "
+                        + getQuantidadeMissoesConcluidas()
+        );
+
+        System.out.println(
+                "Missões pendentes: "
+                        + getQuantidadeMissoesPendentes()
+        );
+
+        System.out.printf(
+                "Taxa de conclusão: %.2f%%\n",
+                getTaxaConclusao()
+        );
+
+        System.out.println(
+                "Conquistas desbloqueadas: "
+                        + getQuantidadeConquistasDesbloqueadas()
+                        + "/"
+                        + this.conquistas.size()
+        );
 
         System.out.println("====================\n");
     }
