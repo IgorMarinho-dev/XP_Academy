@@ -35,6 +35,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Sistema de XP
 * Sistema de níveis
 * Exibição de estatísticas do usuário
+* Estatísticas avançadas de progresso
 
 ### Missões
 
@@ -69,11 +70,19 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Desbloqueio único por conquista
 * Associação de conquistas ao usuário
 
+### Estatísticas Avançadas
+
+* Quantidade total de missões criadas
+* Quantidade de missões concluídas
+* Quantidade de missões pendentes
+* Taxa de conclusão (%)
+* Quantidade de conquistas desbloqueadas
+
 ## Estrutura Atual
 
 * `Usuario.java`
 
-  * Responsável por armazenar informações do usuário, missões, histórico de missões, XP, nível e conquistas.
+  * Responsável por armazenar informações do usuário, missões, histórico de missões, XP, nível, conquistas e estatísticas.
 
 * `Missao.java`
 
@@ -102,14 +111,14 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Recompensas por dificuldade
 * Estatísticas do usuário
 
-### v0.3 (Em desenvolvimento)
+### v0.3 (Concluída)
 
 * ✔ Sistema de conquistas
 * ✔ Primeira Missão
 * ✔ Veterano
 * ✔ Categorias de missões
 * ✔ Histórico de missões
-* ⬜ Estatísticas avançadas
+* ✔ Estatísticas avançadas
 
 ## Roadmap
 
