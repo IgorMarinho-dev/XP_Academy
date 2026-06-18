@@ -1,0 +1,4 @@
+Nome: Igor
+Email: igor@email.com
+XP: 0
+Nivel: 1

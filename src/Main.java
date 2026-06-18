@@ -1,9 +1,14 @@
+import model.Usuario;
+import model.Missao;
 import model.Conquista;
+import model.ArquivoService;
 
 public class Main {
 
     public static void main(String[] args) {
         Usuario igor = new Usuario("Igor", "igor@email.com", "123456");
+
+        ArquivoService.salvarUsuario(igor);
 
         Missao estudarJava = new Missao("Estudar Java", 2, "Revisar Orientação a Objetos", "Estudo");
         Missao organizarMesa = new Missao("Organizar Mesa", 0, "Organizar a Mesa do Quarto", "Organização");
@@ -50,5 +55,14 @@ public class Main {
         System.out.println(
                 igor.getQuantidadeConquistasDesbloqueadas()
         );
+
+        ArquivoService.carregarUsuario();
+
+        Usuario usuarioCarregado = ArquivoService.carregarUsuario();
+
+        System.out.println(usuarioCarregado.getNome());
+        System.out.println(usuarioCarregado.getEmail());
+        System.out.println(usuarioCarregado.getXp());
+        System.out.println(usuarioCarregado.getNivel());
     }
 }

@@ -1,3 +1,5 @@
+package model;
+
 import model.Conquista;
 
 import java.util.List;
@@ -38,6 +40,32 @@ public class Usuario {
 
         this.xp = 0;
         this.nivel = 1;
+    }
+
+    public Usuario(String nome, String email, String senha, int xp, int nivel) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.missoes = new ArrayList<>();
+        this.historicoMissoes = new ArrayList<>();
+        this.conquistas = new ArrayList<>();
+
+        this.conquistas.add(
+                new Conquista(
+                        "Primeira Missão",
+                        "Conclua sua primeira missão."
+                )
+        );
+
+        this.conquistas.add(
+                new Conquista(
+                        "Veterano",
+                        "Conclua 5 missões."
+                )
+        );
+
+        this.xp = xp;
+        this.nivel = nivel;
     }
 
     public void setNome(String nome) {

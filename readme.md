@@ -26,7 +26,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * CSS
 * JavaScript
 
-## Funcionalidades da Versão 0.3
+## Funcionalidades da Versão 0.4
 
 ### Usuários
 
@@ -78,6 +78,13 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Taxa de conclusão (%)
 * Quantidade de conquistas desbloqueadas
 
+### Persistência de Dados
+
+* Salvamento de usuário em arquivo `.txt`
+* Carregamento de usuário a partir de arquivo `.txt`
+* Persistência de nome, email, XP e nível
+* Reconstrução automática do usuário salvo
+
 ## Estrutura Atual
 
 * `Usuario.java`
@@ -91,6 +98,10 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * `Conquista.java`
 
   * Representa uma conquista desbloqueável pelo usuário.
+
+* `ArquivoService.java`
+
+  * Responsável pelo salvamento e carregamento de dados do usuário em arquivo.
 
 * `Main.java`
 
@@ -111,22 +122,31 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Recompensas por dificuldade
 * Estatísticas do usuário
 
-### v0.3 (Concluída)
+### v0.3
 
-* ✔ Sistema de conquistas
-* ✔ Primeira Missão
-* ✔ Veterano
-* ✔ Categorias de missões
-* ✔ Histórico de missões
-* ✔ Estatísticas avançadas
+* Sistema de conquistas
+* Primeira Missão
+* Veterano
+* Categorias de missões
+* Histórico de missões
+* Estatísticas avançadas
+
+### v0.4 (Em desenvolvimento)
+
+* ✔ Salvamento de usuário em arquivo
+* ✔ Carregamento de usuário em arquivo
+* ✔ Persistência de XP e nível
+* ⬜ Persistência de missões
+* ⬜ Persistência de conquistas
+* ⬜ Carregamento completo do perfil
 
 ## Roadmap
 
 ### Versão 0.4
 
-* Salvamento de progresso em arquivo
-* Persistência de dados entre execuções
-* Carregamento automático do perfil do usuário
+* Persistência de missões
+* Persistência de conquistas
+* Carregamento completo do perfil do usuário
 
 ### Versão 0.5
 
