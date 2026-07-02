@@ -38,6 +38,27 @@ public class ArquivoService {
                             + "\n"
             );
 
+            writer.write(
+                    "Missoes: "
+                            + usuario.getMissoes().size()
+                            + "\n"
+            );
+
+            for (Missao missao : usuario.getMissoes()) {
+
+                writer.write(
+                        missao.getTitulo()
+                                + ";"
+                                + missao.getCategoria()
+                                + ";"
+                                + missao.getDificuldade()
+                                + ";"
+                                + missao.isConcluida()
+                                + "\n"
+                );
+
+            }
+
             writer.close();
 
             System.out.println(
@@ -67,8 +88,7 @@ public class ArquivoService {
             String linhaEmail = leitor.readLine();
             String linhaXp = leitor.readLine();
             String linhaNivel = leitor.readLine();
-
-            leitor.close();
+            String linhaMissoes = leitor.readLine();
 
             String nome = linhaNome.replace("Nome: ", "");
             String email = linhaEmail.replace("Email: ", "");
@@ -81,6 +101,11 @@ public class ArquivoService {
                     linhaNivel.replace("Nivel: ", "")
             );
 
+            int quantidadeMissoes =
+                    Integer.parseInt(
+                            linhaMissoes.replace("Missoes: ", "")
+                    );
+
             Usuario usuario =
                     new Usuario(
                             nome,
@@ -89,6 +114,28 @@ public class ArquivoService {
                             xp,
                             nivel
                     );
+
+            for (int i = 0; i < quantidadeMissoes; i++) {
+
+                String linhaMissao = leitor.readLine();
+
+                String[] dados = linhaMissao.split(";");
+
+                Missao missao = new Missao(
+                        dados[0],
+                        Integer.parseInt(dados[2]),
+                        "",
+                        dados[1]
+                );
+
+                if (Boolean.parseBoolean(dados[3])) {
+                    missao.concluirMissao();
+                }
+
+                usuario.adicionarMissao(missao);
+            }
+
+            leitor.close();
 
             return usuario;
 

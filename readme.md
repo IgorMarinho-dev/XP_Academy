@@ -44,6 +44,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Descrição personalizada
 * Categoria personalizada
 * Status de conclusão
+* Persistência em arquivo
 
 ### Gerenciamento
 
@@ -83,7 +84,8 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * Salvamento de usuário em arquivo `.txt`
 * Carregamento de usuário a partir de arquivo `.txt`
 * Persistência de nome, email, XP e nível
-* Reconstrução automática do usuário salvo
+* Persistência de missões
+* Reconstrução automática das missões do usuário
 
 ## Estrutura Atual
 
@@ -101,7 +103,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 
 * `ArquivoService.java`
 
-  * Responsável pelo salvamento e carregamento de dados do usuário em arquivo.
+  * Responsável pelo salvamento e carregamento dos dados do usuário e das missões em arquivo.
 
 * `Main.java`
 
@@ -136,7 +138,7 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 * ✔ Salvamento de usuário em arquivo
 * ✔ Carregamento de usuário em arquivo
 * ✔ Persistência de XP e nível
-* ⬜ Persistência de missões
+* ✔ Persistência de missões
 * ⬜ Persistência de conquistas
 * ⬜ Carregamento completo do perfil
 
@@ -144,7 +146,6 @@ A ideia principal é transformar tarefas comuns em missões, incentivando a conc
 
 ### Versão 0.4
 
-* Persistência de missões
 * Persistência de conquistas
 * Carregamento completo do perfil do usuário
 
